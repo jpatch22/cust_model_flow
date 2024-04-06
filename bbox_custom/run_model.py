@@ -55,7 +55,7 @@ def run_dpu(dpu):
     #print(batch_size)
     num_samples = 4
     output_shape = 1
-    sample_input = torch.randn(num_samples, *input_shape)
+    sample_input = torch.randn(num_samples, *input_shape) * 100
     count = 0
     while count < num_samples:
         if (count + batch_size <= num_samples):
@@ -67,14 +67,16 @@ def run_dpu(dpu):
         inputData = [np.empty(input_dims, dtype=np.float32, order="C")]
 
         for j in range(runSize):
+            print(j)
             imageRun = inputData[0]
-            random_data = np.random.rand(*input_dims[1:])
+            #random_data = np.random.rand(*input_dims[1:])
+            random_data = np.random.uniform(0, 100, size=input_dims[1:])
             #imageRun[j, :] = random_data
 
             inputData[0][j, ...] = random_data
 
         #execute_async(dpu, {"JacksCNNModel__input_0_fix": inputData[0], "JacksCNNModel__JacksCNNModel_ret_fix": out})
-        print(inputData[0])
+        #print(id(inputData))
         execute_async(dpu, {"AirplaneDetector__input_0_fix": inputData[0], 
             "AirplaneDetector__AirplaneDetector_Linear_fc_bb__ret_fix": out1, 
             "AirplaneDetector__AirplaneDetector_Linear_fc_cls__ret_19_fix": out2})
