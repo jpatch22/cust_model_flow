@@ -1,0 +1,35 @@
+{
+  "param":
+  {
+    "ImageClassifier::conv1.weight":[[8,9]],
+    "ImageClassifier::conv1.bias":[[8,9]],
+    "ImageClassifier::conv2.weight":[[8,11]],
+    "ImageClassifier::conv2.bias":[[8,11]],
+    "ImageClassifier::conv3.weight":[[8,11]],
+    "ImageClassifier::conv3.bias":[[8,11]],
+    "ImageClassifier::fc1.weight":[[8,12]],
+    "ImageClassifier::fc1.bias":[[8,12]],
+    "ImageClassifier::fc2.weight":[[8,11]],
+    "ImageClassifier::fc2.bias":[[8,11]]
+  },
+  "output":
+  {
+    "ImageClassifier::nndct_input_0":[[8,5]],
+    "ImageClassifier::nndct_relu_2":[[8,5]],
+    "ImageClassifier::nndct_maxpool_3":[[8,5]],
+    "ImageClassifier::nndct_relu_5":[[8,6]],
+    "ImageClassifier::nndct_maxpool_6":[[8,6]],
+    "ImageClassifier::nndct_relu_8":[[8,7]],
+    "ImageClassifier::nndct_maxpool_9":[[8,7]],
+    "ImageClassifier::nndct_relu_12":[[8,8]],
+    "ImageClassifier::nndct_dense_13":[[8,10]]
+  },
+  "input":
+  {
+
+  },
+  "fast_finetuned":false,
+  "bias_corrected":true,
+  "version":"3.5.0+60df3f1+torch1.13.1",
+  "graph_md5":"2c86122789bb28c7a11fb7a59578c40e"
+}

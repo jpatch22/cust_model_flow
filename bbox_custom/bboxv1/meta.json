@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "bboxv1.xmodel",
+    "kernel": [
+        "subgraph_AirplaneDetector__AirplaneDetector_430_fix"
+    ],
+    "target": "DPUCVDX8H_ISA1_F2W4_4PE"
+}

@@ -1,0 +1,35 @@
+{
+  "param":
+  {
+    "AirplaneDetector::conv1.weight":[[8,9]],
+    "AirplaneDetector::conv1.bias":[[8,9]],
+    "AirplaneDetector::conv2.weight":[[8,10]],
+    "AirplaneDetector::conv2.bias":[[8,10]],
+    "AirplaneDetector::conv3.weight":[[8,11]],
+    "AirplaneDetector::conv3.bias":[[8,11]],
+    "AirplaneDetector::fc_cls.weight":[[8,12]],
+    "AirplaneDetector::fc_cls.bias":[[8,12]],
+    "AirplaneDetector::fc_bb.weight":[[8,12]],
+    "AirplaneDetector::fc_bb.bias":[[8,12]]
+  },
+  "output":
+  {
+    "AirplaneDetector::nndct_input_0":[[8,4]],
+    "AirplaneDetector::nndct_relu_2":[[8,6]],
+    "AirplaneDetector::nndct_maxpool_3":[[8,6]],
+    "AirplaneDetector::nndct_relu_5":[[8,6]],
+    "AirplaneDetector::nndct_maxpool_6":[[8,6]],
+    "AirplaneDetector::nndct_relu_8":[[8,7]],
+    "AirplaneDetector::nndct_adaptive_avg_pool2d_9":[[8,7]],
+    "AirplaneDetector::nndct_dense_12":[[8,5]],
+    "AirplaneDetector::nndct_dense_13":[[8,5]]
+  },
+  "input":
+  {
+
+  },
+  "fast_finetuned":false,
+  "bias_corrected":true,
+  "version":"3.5.0+60df3f1+torch1.13.1",
+  "graph_md5":"a3712010ae0f42a76f08f3cb4373c134"
+}
