@@ -40,11 +40,8 @@ class ImageClassifier(nn.Module):
     
     def _get_conv_output_size(self, height, width):
         # Function to compute the size of the feature map after convolution and pooling
-        print("entering func")
-        print("self", self.relu)
         x = torch.randn(1, 3, height, width)
         x = self.pool(self.relu(self.conv1(x)))
-        print("after")
         x = self.pool(self.relu(self.conv2(x)))
         x = self.pool(self.relu(self.conv3(x)))
         return x.size(2)  # Assuming square feature maps
