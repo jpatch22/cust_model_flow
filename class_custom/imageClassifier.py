@@ -19,7 +19,6 @@ class ImageClassifier(nn.Module):
         self.fc1 = nn.Linear(128 * self.feature_size * self.feature_size, 512)
         self.fc2 = nn.Linear(512, num_classes)
         
-        
         # Define dropout layer
         self.dropout = nn.Dropout(p=0.5)
         
@@ -40,11 +39,11 @@ class ImageClassifier(nn.Module):
     
     def _get_conv_output_size(self, height, width):
         # Function to compute the size of the feature map after convolution and pooling
-        print("entering func")
-        print("self", self.relu)
+        #print("entering func")
+        #print("self", self.relu)
         x = torch.randn(1, 3, height, width)
         x = self.pool(self.relu(self.conv1(x)))
-        print("after")
+        #print("after")
         x = self.pool(self.relu(self.conv2(x)))
         x = self.pool(self.relu(self.conv3(x)))
         return x.size(2)  # Assuming square feature maps

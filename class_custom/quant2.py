@@ -13,8 +13,8 @@ from imageClassifier import ImageClassifier
 
 num_samples = 1
 num_channels = 3
-image_height = 32
-image_width = 32
+image_height = 128
+image_width = 128
 num_classes = 10
 input_shape = (num_channels, image_height, image_width)
 def evaluate(model, device, dataset):
@@ -30,7 +30,7 @@ def main():
     config_file=None
     target=None
     model = ImageClassifier(image_height, image_width, num_classes)
-    model.load_state_dict(torch.load("image_classifier.pth"))
+    model.load_state_dict(torch.load("model_resume_10.pth"))
     quantizer = torch_quantizer(
                     quant_mode, model, (inputs), device=device, quant_config_file=config_file, target=target)
     quant_model = quantizer.quant_model

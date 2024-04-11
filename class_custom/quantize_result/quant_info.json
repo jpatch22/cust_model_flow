@@ -1,28 +1,28 @@
 {
   "param":
   {
-    "ImageClassifier::conv1.weight":[[8,9]],
+    "ImageClassifier::conv1.weight":[[8,8]],
     "ImageClassifier::conv1.bias":[[8,9]],
-    "ImageClassifier::conv2.weight":[[8,11]],
-    "ImageClassifier::conv2.bias":[[8,11]],
-    "ImageClassifier::conv3.weight":[[8,11]],
-    "ImageClassifier::conv3.bias":[[8,11]],
-    "ImageClassifier::fc1.weight":[[8,12]],
-    "ImageClassifier::fc1.bias":[[8,12]],
-    "ImageClassifier::fc2.weight":[[8,11]],
-    "ImageClassifier::fc2.bias":[[8,11]]
+    "ImageClassifier::conv2.weight":[[8,8]],
+    "ImageClassifier::conv2.bias":[[8,9]],
+    "ImageClassifier::conv3.weight":[[8,8]],
+    "ImageClassifier::conv3.bias":[[8,9]],
+    "ImageClassifier::fc1.weight":[[8,8]],
+    "ImageClassifier::fc1.bias":[[8,9]],
+    "ImageClassifier::fc2.weight":[[8,8]],
+    "ImageClassifier::fc2.bias":[[8,9]]
   },
   "output":
   {
-    "ImageClassifier::nndct_input_0":[[8,5]],
+    "ImageClassifier::nndct_input_0":[[8,4]],
     "ImageClassifier::nndct_relu_2":[[8,5]],
     "ImageClassifier::nndct_maxpool_3":[[8,5]],
-    "ImageClassifier::nndct_relu_5":[[8,6]],
-    "ImageClassifier::nndct_maxpool_6":[[8,6]],
-    "ImageClassifier::nndct_relu_8":[[8,7]],
-    "ImageClassifier::nndct_maxpool_9":[[8,7]],
-    "ImageClassifier::nndct_relu_12":[[8,8]],
-    "ImageClassifier::nndct_dense_13":[[8,10]]
+    "ImageClassifier::nndct_relu_5":[[8,4]],
+    "ImageClassifier::nndct_maxpool_6":[[8,4]],
+    "ImageClassifier::nndct_relu_8":[[8,5]],
+    "ImageClassifier::nndct_maxpool_9":[[8,5]],
+    "ImageClassifier::nndct_relu_12":[[8,2]],
+    "ImageClassifier::nndct_dense_13":[[8,1]]
   },
   "input":
   {

@@ -33,14 +33,15 @@ def execute_async(dpu, tensor_buffers_dict):
 def run_dpu(dpu):
     num_samples = 1
     num_channels = 3
-    image_height = 32
-    image_width = 32
+    image_height = 224
+    image_width = 224
     num_classes = 10
     input_shape = (num_channels, image_height, image_width)
 
     input_tensor = dpu.get_input_tensors()
     output_tensor = dpu.get_output_tensors()
     print(output_tensor)
+    print(input_tensor)
 
     input_dims = tuple(input_tensor[0].dims)
     output_dims = tuple(output_tensor[0].dims)
@@ -69,7 +70,7 @@ def run_dpu(dpu):
             #inputData[0][j, ...] = random_data
 
         #execute_async(dpu, {"JacksCNNModel__input_0_fix": inputData[0], "JacksCNNModel__JacksCNNModel_ret_fix": out})
-        execute_async(dpu, {"ImageClassifier__input_0_fix": inputData[0], "ImageClassifier__ImageClassifier_Linear_fc2__ret_fix": out})
+        execute_async(dpu, {"ImageClassifier__ImageClassifier_Linear_fc2__ret_fix": inputData[0], "ImageClassifier__ImageClassifier_ReLU_relu__ret_19(TransferMatMulToConv2d)_inserted_fix_2": out})
 
         count += runSize 
         for i in range(runSize):
@@ -93,7 +94,7 @@ def run_dpu(dpu):
 
 def main():
     # create graph runner
-    xmodel_file = "class_v1/class_v1.xmodel"
+    xmodel_file = "maybe/maybe.xmodel"
     graph = xir.Graph.deserialize(xmodel_file)
     subgraph = graph.get_root_subgraph().toposort_child_subgraph()
     index = -1
